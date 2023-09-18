@@ -1,8 +1,8 @@
-name: Build container image
+name: Build
 # This run-name will contain the branch name when run with pull_request or
 # pull_request_target event.
 # Otherwise it will contain the tag name if present or SHA.
-run-name: Build container image ${{ github.head_ref || ( github.ref_type == 'tag' && github.ref_name || github.sha ) }}
+run-name: Build ${{ github.head_ref || ( github.ref_type == 'tag' && github.ref_name || github.sha ) }}
 
 concurrency:
   # Run only for most recent commit in PRs but for all tags and commits on main
